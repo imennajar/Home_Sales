@@ -195,19 +195,19 @@ else: print ('not cached')
 
 **Query on Virtual, Uncached Table:**
 
-  <img src='r1.png' style ='width:700px;height:300px'/> 
+  <img src='r1.png' style ='width:200px;height:300px'/> 
 
 The runtimes is equal to --- 0.6848580837249756 seconds ---
 
 **Query on Virtual, Cached Table:**
   
-<img src='r2.png' style ='width:700px;height:300px'/> 
+<img src='r2.png' style ='width:200px;height:300px'/> 
 
 The runtimes is equal to --- 0.2998685836791992 seconds ---
 
 **Query on Cached, Partitioned Virtual Table:**
 
-<img src='r3.png' style ='width:700px;height:300px'/> 
+<img src='r3.png' style ='width:200px;height:300px'/> 
 
 The runtimes is equal to --- 0.5427412986755371 seconds ---
 
