@@ -193,25 +193,25 @@ else: print ('not cached')
 
 ### Results:
 
-- Based on the virtual table:
+**Query on Virtual, Uncached Table:**
 
   <img src='r1.png' style ='width:700px;height:300px'/> 
 
 The runtimes is equal to --- 0.6848580837249756 seconds ---
 
-- Based on the cached virtual table:
+**Query on Virtual, Cached Table:**
   
 <img src='r2.png' style ='width:700px;height:300px'/> 
 
 The runtimes is equal to --- 0.2998685836791992 seconds ---
 
-- Based on the cached partitionned virtual table:
+**Query on Cached, Partitioned Virtual Table:**
 
-<img src='r3' style ='width:700px;height:300px'/> 
+<img src='r3.png' style ='width:700px;height:300px'/> 
 
 The runtimes is equal to --- 0.5427412986755371 seconds ---
 
-Note on Runtime Variability:
+#### Note on Runtime Variability:
 It's important to note that the exact runtime values provided may vary between different executions of the code. The Spark execution environment is influenced by several factors, including system load, network conditions, and resource availability. While the specific runtime values might change, the overall performance comparisons remain consistent across multiple runs. The reported runtimes in this analysis are representative of the general efficiency patterns observed during the evaluation.
 
 ### Comparaison:
