@@ -189,6 +189,41 @@ if res: print ('cached')
 else: print ('not cached')
 ```
 
+## Comparison of the Runtimes for Three Executions of the Query on View Ratings with an Average Price of Greater Than or Equal to $350,000
+
+### Results:
+
+- Based on the virtual table:
+
+  <img src='r1.png' style ='width:700px;height:300px'/> 
+
+The runtimes is equal to --- 0.6848580837249756 seconds ---
+
+- Based on the cached virtual table:
   
+<img src='r2.png' style ='width:700px;height:300px'/> 
+
+The runtimes is equal to --- 0.2998685836791992 seconds ---
+
+- Based on the cached partitionned virtual table:
+
+<img src='r3' style ='width:700px;height:300px'/> 
+
+The runtimes is equal to --- 0.5427412986755371 seconds ---
+
+Note on Runtime Variability:
+It's important to note that the exact runtime values provided may vary between different executions of the code. The Spark execution environment is influenced by several factors, including system load, network conditions, and resource availability. While the specific runtime values might change, the overall performance comparisons remain consistent across multiple runs. The reported runtimes in this analysis are representative of the general efficiency patterns observed during the evaluation.
+
+### Comparaison:
+
+- The longest runtime is associated with the execution of the query on the virtual, uncached table.
+
+- The shortest runtime is observed during the execution of the query on the virtual, cached table. This can be attributed to the efficiency of storing the virtual table in the cache memory, eliminating the need to reload the table with each call and significantly reducing the query execution time.
+
+- Despite implementing partitioning with Parquet on the cached virtual table, the query's runtime remains higher compared to the cached virtual table. This can be attributed to the choice of the partition field, date_built, which is not utilized in the query's conditions.
+
+### Conclusion:
+
+Utilizing techniques such as caching tables and partitioning can enhance the efficiency and speed of data manipulation, particularly in the context of Big Data.
 
   
