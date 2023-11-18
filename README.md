@@ -12,7 +12,7 @@ In this challenge, we will use SparkSQL to determine key metrics about home sale
 
 - How to partition by a chosen field on a formatted parquet
 
-- Hoe to create a temporary table for the parquet data.
+- How to create a temporary table for the parquet data.
 
 - How to answer questions using SparkSQL
 ## Instructions:
@@ -21,7 +21,7 @@ In this challenge, we will use SparkSQL to determine key metrics about home sale
 
 - Read a csv data into a Spark DataFrame.
 
-- Create a temporary table
+- Create a temporary table.
 
 - Answer the following questions using SparkSQL about:
 
